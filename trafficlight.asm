@@ -10,27 +10,19 @@
  out DDRB,r16 ;I/O mapped (see
  m328pdef.inc)
 
- L1: ldi r16, 0X21 ;North-South Green for
- 50 seconds, East-West Red for 50
- Seconds, uses 00100001 in hex
+ L1: ldi r16, 0X21 ;North-South Green for 50 seconds, East-West Red for 50 Seconds, uses 00100001 in hex
 
  out portB,r16
  rcall mydelay
- ldi r16,0x22 ;North-South Yellow for 10
- seconds, East-West Red for 10 seconds,
- uses 00100010 in hex
+ ldi r16,0x22 ;North-South Yellow for 10 seconds, East-West Red for 10 seconds, uses 00100010 in hex
 
  out portB,r16
  rcall mydelay
- ldi r16,0X0C ;North-South Red for 50
- seconds, East-West Green for 50 seconds,
- uses 00001100 in hex
+ ldi r16,0X0C ;North-South Red for 50 seconds, East-West Green for 50 seconds, uses 00001100 in hex
 
  out portB,r16
  rcall mydelay
- ldi r16,0X14 ;North-South Red for 10
- seconds, East-West Yellow for 10 seconds,
- uses 00010100 in hex
+ ldi r16,0X14 ;North-South Red for 10 seconds, East-West Yellow for 10 seconds, uses 00010100 in hex
 
  out portB,r16
  rcall mydelay
@@ -46,8 +38,7 @@
  brne L2
  ret
 
- shortdelay: ;calls mydelay ten times create
- ten seconds of delay
+ shortdelay: ;calls mydelay ten times create ten seconds of delay
  rcall mydelay
  rcall mydelay
  rcall mydelay
@@ -60,11 +51,10 @@
  rcall mydelay
  ret
 
- longdelay: ;calls shortdelay five times to
- create fifty seconds of delay
+ longdelay: ;calls shortdelay five times to create fifty seconds of delay
  rcall shortdelay
  rcall shortdelay
  rcall shortdelay
  rcall shortdelay
  rcall shortdelay
- re
+ ret
