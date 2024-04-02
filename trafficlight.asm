@@ -7,8 +7,7 @@
  ldi r16, high (RAMEND)
  out sph,r16
  ldi r16, 0xFF ;
- out DDRB,r16 ;I/O mapped (see
- m328pdef.inc)
+ out DDRB,r16 ;I/O mapped (see m328pdef.inc)
 
  L1: ldi r16, 0X21 ;North-South Green for 50 seconds, East-West Red for 50 Seconds, uses 00100001 in hex
 
